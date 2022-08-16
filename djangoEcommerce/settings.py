@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-p7$b)sa0p68%cmb!2ctj9p6^sp5a(vymd52x4zipu=h$gv@h^=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'djangoshop-tyler.herokuapp.com/']
 
 
 # Application definition
@@ -60,6 +60,7 @@ LOCALE_PATHS = (
 )
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -190,4 +191,8 @@ BRAINTREE_CONF = braintree.Configuration(
     BRAINTREE_PRIVATE_KEY
 
 )
+
+import dj_database_url
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
 

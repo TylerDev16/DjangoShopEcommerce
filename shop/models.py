@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 from parler.models import TranslatableModel, TranslatedFields
-from django_resized import ResizedImageField
 
 
 class Category(TranslatableModel):
