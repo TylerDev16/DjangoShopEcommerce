@@ -25,7 +25,7 @@
         {% endfor %}
       </ul>
     </div>
-    <div id="main" class="product-list mt-4 text-left">
+    <div>
         <h1>{% if category %}{{ category.name }}{% else %} Products {% endif %}</h1>
 {#        {% for product in products %}#}
 {#            <div class="item">#}
@@ -37,12 +37,11 @@
 {#                ${{ product.price }}#}
 {#            </div>#}
 {#        {% endfor %}#}
-        <div class="row row-cols-1 row-cols-md-4 g-2">
+        <div class="card-deck" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 1rem">
             {% for product in products %}
-            <div class="col">
-                <div class="card hoverable h-100" style="width: auto;">
+                <div class="card">
                   <div class="bg-image hover-overlay ripple text-center" data-mdb-ripple-color="light">
-                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top embed-responsive-item" style="width: 100%; height: 35vh; object-fit: cover"/>
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" class="card-img-top embed-responsive-item" style="width: 100%; height: 15vh; object-fit: cover"/>
                     <a href="{{ product.get_absolute_url }}">
                       <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                     </a>
@@ -52,7 +51,6 @@
                     <p class="card-text">{{ product.price }}</p>
                   </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>
