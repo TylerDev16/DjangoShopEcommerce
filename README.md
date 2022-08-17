@@ -7,6 +7,7 @@ Includes:
 - Custom context processors.
 - Shopping cart using Django sessions.
 - Order management.
+- Built in English to Spanish translation using Django Rosetta/ Django Parler
 - Braintree payment processing.
 
 
