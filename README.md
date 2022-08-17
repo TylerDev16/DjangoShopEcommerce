@@ -12,4 +12,5 @@ Includes:
 
 Live demo:
 https://djangoshop-tyler.herokuapp.com/
+
 (I decided not to host images on s3 buckets, however there is a built in function to supply a product with a default "no-img" in the event an image is not provided.
