@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-p7$b)sa0p68%cmb!2ctj9p6^sp5a(vymd52x4zipu=h$gv@h^='
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -173,16 +173,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-import redis
+# import redis
+#
+# REDIS_HOST = 'localhost'
+# REDIS_PORT = 6379
+# REDIS_DB = 1
 
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
-REDIS_DB = 1
 
-
-BRAINTREE_MERCHANT_ID = 'gzwp75rsybntgx3k'
-BRAINTREE_PUBLIC_KEY = '4md8k647cggt3fhz'
-BRAINTREE_PRIVATE_KEY = '8d6d1b88f7241ec3cd44c651c8b02a44'
+BRAINTREE_MERCHANT_ID = ''
+BRAINTREE_PUBLIC_KEY = ''
+BRAINTREE_PRIVATE_KEY = ''
 
 BRAINTREE_CONF = braintree.Configuration(
     braintree.Environment.Sandbox,
