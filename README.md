@@ -10,4 +10,6 @@ Includes:
 - Built in English to Spanish translation using Django Rosetta/ Django Parler
 - Braintree payment processing.
 
+Live demo:
+https://djangoshop-tyler.herokuapp.com/
 
